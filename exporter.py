@@ -6,7 +6,9 @@ from xlsxwriter.utility import xl_rowcol_to_cell
 # Will modify, next iteration.
 
 def export(data_collection, table_title):
-	workbook = xlsxwriter.Workbook(table_title + " Data.xlsx")
+	curr_time = time.time()
+	timestamp = datetime.datetime.fromtimestamp(curr_time).strftime('%F at %I.%M.%S %p')
+	workbook = xlsxwriter.Workbook(table_title + " " + timestamp + " Data.xlsx")
 	worksheet = workbook.add_worksheet("RawData")
 	resultsSheet = workbook.add_worksheet("Calculations")
 
@@ -89,7 +91,7 @@ def export(data_collection, table_title):
 	# next empty column.
 	worksheet_curr_col = 0
 
-	for each_company in data_collection:
+	for each_company in reversed(data_collection):
 		company_name, ticker, final_url, data = each_company
 		worksheet.write(1, worksheet_curr_col + 2, ticker, otherHeaders)
 		cell = xl_rowcol_to_cell(1, worksheet_curr_col + 2)
