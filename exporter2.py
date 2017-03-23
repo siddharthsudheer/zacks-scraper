@@ -18,13 +18,21 @@ def export(data_collection, table_title):
 	# outFile.close()
 
 
+	# for each_company in data_collection:
+	# 	company_name, ticker, final_url, data = each_company
+	# 	filename = re.sub(' ', '_', table_title) + ticker
+	# 	outFile = open(filename, 'w')
+	# 	for date, value in data:
+	# 		newDate = datetime.datetime.strptime(date, "%m/%d/%Y").strftime('%b-%Y')
+	# 		new_val = "NULL" if value == "N/A" else float(re.sub('%', '', value))/100
+	# 		insert = "{}, {}\n".format(newDate, new_val)
+	# 		outFile.write(insert)
+	# 	outFile.close()
+
 	for each_company in data_collection:
 		company_name, ticker, final_url, data = each_company
-		filename = re.sub(' ', '_', table_title) + ticker
-		outFile = open(filename, 'w')
 		for date, value in data:
-			newDate = datetime.datetime.strptime(date, "%m/%d/%Y").strftime('%b-%Y')
-			new_val = "NULL" if value == "N/A" else float(re.sub('%', '', value))/100
-			insert = "{}, {}\n".format(newDate, new_val)
-			outFile.write(insert)
-		outFile.close()
+			# newDate = datetime.datetime.strptime(date, "%m/%d/%Y").strftime('%b-%Y')
+			# new_val = "NULL" if value == "N/A" else float(re.sub('%', '', value))/100
+			# insert = "{}, {}\n".format(newDate, new_val)
+			print(date, ": ", value)
