@@ -28,11 +28,3 @@ def export(data_collection, table_title):
 	# 		insert = "{}, {}\n".format(newDate, new_val)
 	# 		outFile.write(insert)
 	# 	outFile.close()
-
-	for each_company in data_collection:
-		company_name, ticker, final_url, data = each_company
-		for date, value in data:
-			# newDate = datetime.datetime.strptime(date, "%m/%d/%Y").strftime('%b-%Y')
-			# new_val = "NULL" if value == "N/A" else float(re.sub('%', '', value))/100
-			# insert = "{}, {}\n".format(newDate, new_val)
-			print(date, ": ", value)

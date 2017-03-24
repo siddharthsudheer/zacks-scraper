@@ -1,0 +1,12 @@
+1490318928884	geckodriver	INFO	Listening on 127.0.0.1:50857
+1490320010902	geckodriver	INFO	Listening on 127.0.0.1:51107
+1490320011960	mozprofile::profile	INFO	Using profile path /var/folders/jp/9pcq9w2d40qcnx_0zbct52m40000gn/T/rust_mozprofile.oPy5aQAM8XPv
+1490320011964	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin with args []
+1490320011979	geckodriver::marionette	INFO	Connecting to Marionette on localhost:51116
+1490320012559	Marionette	INFO	Listening on port 51116
+1490320012803	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.zacks.com/stock/chart/FB/eps, line 465: ReferenceError: ybotq is not defined
+JavaScript error: https://www.zacks.com/stock/chart/FB/eps, line 607: ReferenceError: ybotq is not defined
+JavaScript error: https://www.zacks.com/stock/chart/FB/eps, line 981: ReferenceError: ybotq is not defined
+JavaScript error: https://www.zacks.com/stock/chart/FB/eps, line 1064: ReferenceError: ybotq is not defined
+1490320026353	Marionette	INFO	New connections will no longer be accepted
